@@ -61,7 +61,7 @@
         devShells.default = pkgs.mkShell {
           name = "qmk-firmware";
 
-          buildInputs = with pkgs; [ clang-tools_11 dfu-programmer dfu-util diffutils git pythonEnv niv ]
+          buildInputs = with pkgs; [ clang-tools_11 dfu-programmer dfu-util diffutils git pythonEnv niv wb32-dfu-updater ]
             ++ pkgs.lib.optional avr [
               pkgs.pkgsCross.avr.buildPackages.binutils
               pkgs.pkgsCross.avr.buildPackages.gcc8
